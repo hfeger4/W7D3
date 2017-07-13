@@ -8,13 +8,18 @@ class PokemonDetail extends React.Component {
     this.props.requestSinglePokemon(this.props.match.params.pokemonId);
   }
 
+  componentWillReceiveProps(newProps){
+    if ((this.props.match.params.pokemonId) !== (newProps.match.params.pokemonId)){
+      this.props.requestSinglePokemon(newProps.match.params.pokemonId);
+  }}
+
   render() {
     const {pokemon, items} = this.props;
     console.log(pokemon);
     if (!pokemon) return null;
 
     return(
-      <section>
+      <section className="single-pokemon">
         <figure>
           <img src={pokemon.image_url} alt={pokemon.name} />
         </figure>

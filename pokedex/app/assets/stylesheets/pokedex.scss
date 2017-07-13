@@ -1,0 +1,30 @@
+.pokedex {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.single-pokemon{
+  position: fixed;
+  text-align: center;
+  list-style: none;
+  font-size: 20px;
+  font-family: fantasy;
+  right: 150px;
+}
+
+li {
+  list-style: none;
+}
+
+.poke-image{
+  height: 100px;
+  width: 50%;
+}
+
+.poke-item {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
