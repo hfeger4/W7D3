@@ -8,9 +8,20 @@
   position: fixed;
   text-align: center;
   list-style: none;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: bolder;
   font-family: fantasy;
+  color: black;
   right: 150px;
+  top: 80px;
+  border: 1px solid black;
+  background-color: #2A4040;
+
+}
+
+.single-pokemon img{
+  height: 300px;
+  width: 300px;
 }
 
 li {
@@ -19,12 +30,32 @@ li {
 
 .poke-image{
   height: 100px;
-  width: 50%;
+  width: 100px;
+  padding: 10px 10px;
+
 }
 
 .poke-item {
   display: flex;
   flex-direction: column;
+  font-family: fantasy;
+  font-size: 15px;
+  justify-content: center;
+
   // justify-content: center;
   // align-items: center;
+}
+
+.poke-item a div:hover {
+  border: 1px solid black;
+  background-color: burlywood;
+}
+
+.poke-item div {
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  font-weight: 700;
 }

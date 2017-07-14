@@ -1,14 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 
 const PokemonIndexItem= ({pokemon}) => (
   <li className="poke-item">
-    <Link to={`/pokemon/${pokemon.id}`}>
-      <span>{ pokemon.id }</span>
-      <img className="poke-image" src={pokemon.image_url} alt={pokemon.name}/>
-      <span>{ pokemon.name }</span>
-    </Link>
+    <NavLink to={`/pokemon/${pokemon.id}`}>
+      <div>
+        <img className="poke-image" src={pokemon.image_url} alt={pokemon.name}/>
+        <span>{ pokemon.id }:  </span>
+        <span> { pokemon.name }</span>
+      </div>
+    </NavLink>
   </li>
 );
 
